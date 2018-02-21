@@ -1,0 +1,27 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Voyage-4",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon index.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chingu-voyage4/Bears-Team-27.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chingu-voyage4/Bears-Team-27/issues"
+  },
+  "homepage": "https://github.com/chingu-voyage4/Bears-Team-27#readme",
+  "dependencies": {
+    "concurrently": "^3.5.1",
+    "express": "^4.16.2",
+    "nodemon": "^1.15.1"
+  }
+}
