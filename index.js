@@ -2,7 +2,8 @@ const express = require('express');
 const app = express();
 
 app.get('/', (req, res) => {
-  res.send('Have a great weekend everyone!');
+ te/more-practice
+  res.send("Yeah for Sunday FUNday");
 });
 
 app.listen(5000);
