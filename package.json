@@ -21,6 +21,7 @@
   "homepage": "https://github.com/chingu-voyage4/Bears-Team-27#readme",
   "dependencies": {
     "concurrently": "^3.5.1",
+    "dotenv": "^5.0.1",
     "express": "^4.16.2",
     "mongoose": "^5.0.7",
     "nodemon": "^1.15.1"
