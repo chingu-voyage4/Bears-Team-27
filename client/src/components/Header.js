@@ -8,10 +8,15 @@ class Header extends Component {
           Inventoree
         </a>
         <ul className="navbar-nav">
+          {/* 
           <li className="nav-item">
             <a className="nav-link" href="/auth/google">
               Login with Google
             </a>
+          </li>
+          */}
+          <li className="nav-item">
+            <button onClick={this.props.login}>Login</button>
           </li>
         </ul>
       </nav>

@@ -7,11 +7,23 @@ import Landing from './components/Landing';
 import Dashboard from './components/Dashboard';
 
 class App extends Component {
+  state = {
+    isAuthenticated: false
+  };
+
+  authenticate = () => {
+    setTimeout(this.setState({ isAuthenticated: true }), 100);
+  };
+
+  signout = () => {
+    setTimeout(this.setState({ isAuthenticated: false }), 100);
+  };
+
   render() {
     return (
       <BrowserRouter>
         <div className="App">
-          <Header />
+          <Header login={this.authenticate} signout={this.signout} />
           <Route exact path="/" component={Landing} />
           <Route path="/dashboard" component={Dashboard} />
         </div>
