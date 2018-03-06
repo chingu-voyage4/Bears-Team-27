@@ -23,7 +23,11 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className="App">
-          <Header login={this.authenticate} signout={this.signout} />
+          <Header
+            isAuthenticated={this.state.isAuthenticated}
+            login={this.authenticate}
+            signout={this.signout}
+          />
           <Route exact path="/" component={Landing} />
           <Route path="/dashboard" component={Dashboard} />
         </div>
