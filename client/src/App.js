@@ -5,6 +5,7 @@ import './App.css';
 import Header from './components/Header';
 import Landing from './components/Landing';
 import Dashboard from './components/Dashboard';
+import PrivateRoute from './components/PrivateRoute';
 
 class App extends Component {
   state = {
@@ -29,7 +30,11 @@ class App extends Component {
             signout={this.signout}
           />
           <Route exact path="/" component={Landing} />
-          <Route path="/dashboard" component={Dashboard} />
+          <PrivateRoute
+            path="/dashboard"
+            isAuthenticated={this.state.isAuthenticated}
+            component={Dashboard}
+          />
         </div>
       </BrowserRouter>
     );
