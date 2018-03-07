@@ -14,7 +14,6 @@ const Items = props => {
       break;
     case '1':
       location = location2;
-      console.log('I reached case 1');
       break;
     case '2':
       location = location3;
@@ -41,7 +40,12 @@ const Items = props => {
     </div>
   ));
 
-  return <div className="d-flex flex-wrap">{items}</div>;
+  return (
+    <div>
+      <h2>Location {props.match.params.id}</h2>
+      <div className="d-flex flex-wrap">{items}</div>
+    </div>
+  );
 };
 
 export default Items;
