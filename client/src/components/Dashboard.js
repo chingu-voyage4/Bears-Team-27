@@ -54,16 +54,19 @@ class Dashboard extends Component {
             <button onClick={this.addLocationHandler}>{addLocationText}</button>
           </div>
         </div>
-        {this.state.locations.length > 0
-          ? this.state.locations.map((location, index) => (
-              <Location
-                name={location.name}
-                editMode={location.editMode}
-                toggleEditMode={() => this.toggleEditLocationHandler(index)}
-                changed={event => this.updateLocationHandler(event, index)}
-              />
-            ))
-          : null}
+        <div className="d-flex flex-wrap">
+          {this.state.locations.length > 0
+            ? this.state.locations.map((location, index) => (
+                <Location
+                  name={location.name}
+                  editMode={location.editMode}
+                  toggleEditMode={() => this.toggleEditLocationHandler(index)}
+                  changed={event => this.updateLocationHandler(event, index)}
+                  index={index}
+                />
+              ))
+            : null}
+        </div>
       </div>
     );
   }
