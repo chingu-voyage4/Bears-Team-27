@@ -37,7 +37,7 @@ class App extends Component {
             component={Dashboard}
           />
           <PrivateRoute
-            path="/location/0"
+            path="/location/:id"
             isAuthenticated={this.state.isAuthenticated}
             component={Items}
           />
