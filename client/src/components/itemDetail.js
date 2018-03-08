@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class ItemDetail extends Component {
   render () {
     return (
-      <div className={'item ' + this.props.item.toLowerCase().split(" ").join("-")}>
+      <div className={'item ' + this.props.room.toLowerCase().split(" ").join("-")}>
         <h4>{this.props.item}</h4>
         <div className='item-details'>
           <div className='item-detail'><span className='detail'>Room:</span>{this.props.room}</div>
