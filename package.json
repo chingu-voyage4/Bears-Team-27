@@ -7,7 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon index.js",
     "client": "npm run start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "start": "node index.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "repository": {
     "type": "git",
@@ -21,7 +23,9 @@
   "homepage": "https://github.com/chingu-voyage4/Bears-Team-27#readme",
   "dependencies": {
     "concurrently": "^3.5.1",
+    "dotenv": "^5.0.1",
     "express": "^4.16.2",
+    "mongoose": "^5.0.7",
     "nodemon": "^1.15.1"
   }
 }

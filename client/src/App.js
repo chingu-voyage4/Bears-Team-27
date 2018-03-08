@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { Header } from './components/dashboard';
 import { Dashboard } from './components/dashboard';
+
+import Header from './components/Header';
+import Landing from './components/Landing';
 
 class App extends Component {
   componentDidMount () {
@@ -22,7 +24,11 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
+<<<<<<< HEAD
         <Dashboard />
+=======
+        <Landing />
+>>>>>>> development
       </div>
     );
   }
