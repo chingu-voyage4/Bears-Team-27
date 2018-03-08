@@ -3,16 +3,15 @@ const mongoose = require('mongoose'),
 
 // project schema
 const userSchema = new Schema({
-    firstName: String,
-    lastName: String,
-    email: String,
-    id: { type: String, unique: true },
-    locations: [],
-    items: []
+  googleId: String,
+  firstName: String,
+  lastName: String,
+  email: String,
+  locations: [],
+  items: []
 });
 
 // user model
 const userModel = mongoose.model('User', userSchema);
-
 
 module.exports = userModel;
