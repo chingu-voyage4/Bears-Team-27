@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-export class ItemDetail extends Component {
+class ItemDetail extends Component {
   render () {
     return (
-      <div className='item' + {this.props.item}>
+      <div className={'item ' + this.props.item.toLowerCase().split(" ").join("-")}>
         <h4>{this.props.item}</h4>
         <div className='item-details'>
           <div className='item-detail'><span className='detail'>Room:</span>{this.props.room}</div>
@@ -19,9 +19,10 @@ export class ItemDetail extends Component {
           <span className='hidden save'><i className="far fa-save"></i> Save</span>
           <span className='delete'><i className="fas fa-trash-alt"></i> Delete</span>
           <span className='hidden back'><i className="far fa-caret-square-left"></i> Back</span>
-        </div> <!-- close .modify-item -->
-
-      </div> <!-- close .item -->
+        </div>
+      </div>
     );
   }
 }
+
+export default ItemDetail;

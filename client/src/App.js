@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Header } from './components/dashboard';
-import { Dashboard } from './components/dashboard';
 
+import Dashboard from './components/Dashboard';
 import Header from './components/Header';
 import Landing from './components/Landing';
 
@@ -24,11 +23,8 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-<<<<<<< HEAD
         <Dashboard />
-=======
-        <Landing />
->>>>>>> development
+        {/* <Landing /> */}
       </div>
     );
   }
