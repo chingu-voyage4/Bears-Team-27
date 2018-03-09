@@ -8,6 +8,7 @@ body {
 	--regularFontSize: 20px;
 	--almostBlack: #222;
 	--blue: #2c8c99;
+	--almostWhite: #e6e6e6;
 	--transition: .3s ease;
 }
 
@@ -41,7 +42,9 @@ header {
 	height: 35px;
 }
 
-.signin-signup span {
+.signin-signup a {
+	text-decoration: none;
+	color: var(--almostWhite);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -50,9 +53,10 @@ header {
 	transition: var(--transition);
 }
 
-.signin-signup span:hover {
+.signin-signup a:hover {
 	background-color: white;
 	color: var(--blue);
+	padding: 0 10px;
 }
 
 /* ======= TAGLINE ========= */
