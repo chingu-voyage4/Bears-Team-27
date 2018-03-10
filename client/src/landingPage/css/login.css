@@ -96,8 +96,7 @@ main {
 	text-align: center;
 	font-size: calc(var(--regularFontSize) + 5px);
 	padding: 20px 0 10px 0;
-	color: #3098a6;
-	color: var(--almostBlack);
+	color: #fc8664;
 }
 /* ======== form ========== */
 
