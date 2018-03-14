@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<meta charset='utf-8'>
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
+		<title>User Landing Page</title>
+		
+		<!-- font awesome icons -->
+		<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+		<link rel='stylesheet' type='text/css' href='css/userLandingPage.css'>
+	</head>
+
+	<body>
+		<header>
+			<div class='header-inner'>
+				<div class='logo-div'><span class='username'>Username's</span> <span class='logo'>INVENTOREE</span></div>
+
+				<nav class='menu'>
+					<a href='locations.html'>Locations</a> 
+					<a href='landingPage.html'>Logout</a>
+				</nav>
+			</div>
+		</header>
+
+		<main id='main'>
+			<div class='add-location'>
+				<p>Add Location <button id='open-location-modal'>+</button></p>
+			</div>
+
+			<div id='locations' class='locations'>
+			</div>
+
+			<div id='location-modal' class='location-modal-wrapper'>
+				<div class='location-modal'>
+					<div id='close-location-modal' class='close-location-modal'>&times;</div>
+					<input id='location-input' class='location-input' type='text' placeholder="Name of location">
+					<button id='location-submit' class='location-submit'>Submit</button>
+				</div>
+			</div>
+
+		</main>
+		
+		<script src='js/script.js'></script>
+	</body>
+</html>
