@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<meta charset='utf-8'>
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
+		<title>Add item</title>
+		
+		<!-- font awesome icons -->
+		<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+		<link rel='stylesheet' type='text/css' href='css/styles.css'>
+	</head>
+
+	<body>
+		<header>
+			<div class='header-inner'>
+				<div class='logo-div'><span class='username'>Username's</span> <span class='logo'>INVENTOREE</span></div>
+
+				<nav class='menu'>
+					<a href='locations.html'>Locations</a> 
+					<a href='landingPage.html'>Logout</a>
+				</nav>
+			</div>
+		</header>
+
+		<main id='main'>
+
+			<p class='location'>(location) Dashboard</p>
+
+			<div id='add-item' class='add-item'>
+				<p>Add Item <button id='display-form'>+</button></p>
+			</div>
+
+			<div id='form-container' class='form-container'>
+				<form>
+					<fieldset>
+						<legend>Item Details</legend>
+						<p><label>Name:</label> <input type='text' required></p>
+						<p><label>Room:</label> <input type='text'></p>
+						<p><label>Value:</label> <input type='text'></p>
+						<p><label>Date of purchase:</label> <input type='text'></p>
+						<p><label>Warranty Expiry:</label> <input type='text'></p>
+						<p><label>Serial Number:</label> <input type='text'></p>
+						<p><label>Description:</label> <textarea type='text' rows='3'></textarea></p>
+
+						<p class='fieldset-buttons'><button class='fieldset-button fieldset-save'>Save</button><button id='cancel-form' class='fieldset-button fieldset-cancel'>Cancel</button></p>
+					</fieldset>
+				</form>
+			</div>
+
+		</main>
+		
+		<script src='js/script.js'></script>
+	</body>
+</html>
