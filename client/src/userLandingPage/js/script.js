@@ -4,6 +4,7 @@ var locationModal = document.getElementById('location-modal');
 var main = document.getElementById('main');
 var locations = document.getElementById('locations');
 var locationSubmitButton = document.getElementById('location-submit');
+var submenu = document.getElementById('submenu');
 
 /* ==== event listeners ======= */
 
@@ -19,6 +20,7 @@ locationSubmitButton.addEventListener('click', function(){
 	closeModal();
 
 	createLocation(locationValue);
+	createSubmenuLink(locationValue);
 });
 
 // same as above, in the event that user presses enter rather than clicking the submit button
@@ -30,6 +32,7 @@ document.addEventListener('keypress', function(e){
 		closeModal();
 
 		createLocation(locationValue);
+		createSubmenuLink(locationValue);
 	}
 });
 
@@ -80,6 +83,15 @@ function createLocation(value){
 	deleteIcon.classList.add('delete');
 	locationDiv.appendChild(deleteSpan);
 }
+
+// each location the user adds will be a link in the dropdown menu under locations
+function createSubmenuLink(value){
+	var submenuAnchor = document.createElement('A');
+	submenuAnchor.innerHTML = value;
+	submenu.appendChild(submenuAnchor);
+
+}
+
 
 
 
