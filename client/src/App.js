@@ -8,6 +8,8 @@ import Dashboard from './components/Dashboard';
 import Items from './components/Items';
 import PrivateRoute from './components/PrivateRoute';
 
+import Signup from './components/Signup';
+
 class App extends Component {
   state = {
     isAuthenticated: false
@@ -30,7 +32,7 @@ class App extends Component {
             login={this.authenticate}
             signout={this.signout}
           />
-          <Route exact path="/" component={Landing} />
+          <Route exact path="/" render={()=> <Landing isAuthenticated={this.state.isAuthenticated} />} />
           <PrivateRoute
             path="/dashboard"
             isAuthenticated={this.state.isAuthenticated}
@@ -41,6 +43,7 @@ class App extends Component {
             isAuthenticated={this.state.isAuthenticated}
             component={Items}
           />
+          <Route path="/signup" render={() => <Signup login={this.authenticate} />} />
         </div>
       </BrowserRouter>
     );
