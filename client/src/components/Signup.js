@@ -17,7 +17,7 @@ class Signup extends Component {
     setTimeout(()=>{this.setState({ redirect: true })}, 100);
   }
   render() {
-    if (this.state.redirect) {
+    if (this.state.redirect || this.props.isAuthenticated) {
       return <Redirect push to='/dashboard' />;
     }
 

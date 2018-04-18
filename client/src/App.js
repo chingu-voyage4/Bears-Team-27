@@ -43,7 +43,7 @@ class App extends Component {
             isAuthenticated={this.state.isAuthenticated}
             component={Items}
           />
-          <Route path="/signup" render={() => <Signup login={this.authenticate} />} />
+          <Route path="/signup" render={() => <Signup login={this.authenticate} isAuthenticated={this.state.isAuthenticated} />} />
         </div>
       </BrowserRouter>
     );

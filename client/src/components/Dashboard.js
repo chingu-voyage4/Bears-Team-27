@@ -7,8 +7,9 @@ class Dashboard extends Component {
   };
 
   addLocationHandler = () => {
+    let location = prompt("Enter a location name");
     const newLocation = {
-      name: 'New Location',
+      name: location || 'New Location',
       editMode: false
     };
     this.setState({
@@ -63,6 +64,7 @@ class Dashboard extends Component {
                   toggleEditMode={() => this.toggleEditLocationHandler(index)}
                   changed={event => this.updateLocationHandler(event, index)}
                   index={index}
+                  key={index}
                 />
               ))
             : null}
