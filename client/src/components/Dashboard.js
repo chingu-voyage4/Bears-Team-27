@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Location from './Location';
+import './components.css';
 
 class Dashboard extends Component {
   state = {
@@ -41,18 +42,12 @@ class Dashboard extends Component {
   };
 
   render() {
-    let addLocationText = 'Add a New Location to Begin';
-
-    if (this.state.locations.length > 0) {
-      addLocationText = 'Add More Locations';
-    }
-
     return (
       <div className="container">
         <h2>Dashboard</h2>
         <div className="row">
           <div className="col">
-            <button onClick={this.addLocationHandler}>{addLocationText}</button>
+            <button className='addLocation' onClick={this.addLocationHandler}>Add a Location</button>
           </div>
         </div>
         <div className="d-flex flex-wrap">

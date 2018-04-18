@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import NewItem from './NewItem';
+import './components.css';
 
 // This component should fetch data from location id and display
 import { location1, location2, location3 } from '../seed';
@@ -46,16 +47,16 @@ class Items extends Component {
             <li className="list-group-item" key='description'>Description: {item.description}</li>
             <li className="list-group-item" key='serialNumber'>SN: {item.serialNumber}</li>
             <li className="list-group-item" key='value'>Value: {item.value}</li>
-            <li className="list-group-item" key='warranty'>Warranty:{item.warranty}</li>
+            <li className="list-group-item" key='warranty'>Warranty: {item.warranty}</li>
             <li className="list-group-item" key='acqDate'>
-              Date of Purchase:{item.acquisition}
+              Date of Purchase: {item.acquisition}
             </li>
           </ul>
         </div>
       </div>
     ));
     return (
-      <div>
+      <div id='item_display'>
         <h2>Location {this.props.match.params.id}</h2>
         { this.state.show && <NewItem /> }
         <button id='new_item' onClick={this.handleClick.bind(this)}>Add an item</button>

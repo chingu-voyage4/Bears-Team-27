@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './components.css';
 
 const Location = (props) => {
   let nameField = (
@@ -27,6 +28,9 @@ const Location = (props) => {
         <Link to={`/location/${props.index}?${props.name}`} className="btn btn-info btn-sm">
           Details
         </Link>
+        <button className="btn btn-danger btn-sm">
+          Delete
+        </button>
       </div>
     </div>
   );

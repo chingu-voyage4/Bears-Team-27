@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router';
+import './components.css';
 
 class Signup extends Component {
   constructor(props) {
@@ -22,17 +23,18 @@ class Signup extends Component {
     }
 
     return (
-      <div>
+      <div className='main'>
         <form>
-          <input id='firstName' type='text' placeholder='First Name' />
-          <input id='lastName' type='text' placeholder='Last Name' />
-          <input id='email' type='email' placeholder='Email' />
-          <input id='password' type='password' placeholder='Password' />
+          <div className='form-group'><input id='firstName' type='text' placeholder='First Name' /></div>
+          <div className='form-group'><input id='lastName' type='text' placeholder='Last Name' /></div>
+          <div className='form-group'><input id='email' type='email' placeholder='Email' /></div>
+          <div className='form-group'><input id='password' type='password' placeholder='Password' /></div>
           <button id='signup_submit' type='submit'>Create Account</button>
         </form>
-        <h4>Already have an account?</h4><button className="signup-login" onClick={this.login}>
-              Login
-            </button>
+        <h4>Already have an account?</h4>
+        <button className="signup-login" onClick={this.login}>
+          Login
+        </button>
       </div>
     );
   }

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './components.css';
 
 const Header = (props) => {
 
@@ -27,7 +28,7 @@ const Header = (props) => {
   }
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
+    <nav className="navbar navbar-expand-lg justify-content-between header">
       <a className="navbar-brand" href="/">
         Inventoree
       </a>
