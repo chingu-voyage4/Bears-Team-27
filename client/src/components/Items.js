@@ -4,6 +4,7 @@ import './components.css';
 
 // This component should fetch data from location id and display
 import { location1, location2, location3 } from '../seed';
+import ItemDetail from './ItemDetail';
 
 class Items extends Component {
   constructor(props) {

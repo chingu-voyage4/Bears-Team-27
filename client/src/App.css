@@ -1,28 +1,187 @@
-.App {
-  text-align: center;
+body {
+	margin: 0;
+	box-sizing: border-box;
+	font-size: var(--regularFontSize);
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+/* ====== variables ====== */
+
+:root {
+	--regularFontSize: 20px;
+	--almostBlack: #222;
+	--blue: #2c8c99;
+
+	--save: rgba(63, 151, 110, .7);
+	--saveHover: rgba(63, 151, 110, 1);
+
+	--delete: rgba(220, 20, 60, .7);
+	--deleteHover: crimson;
+
+	--back:rgba(255, 165, 0, .6);
+	--backHover: rgba(255, 165, 0, 1);
+
+	--bedroom-color: #7d7abc;
+	--living-room-color: #ef767a;
+	--garage-color: #ffe347;
+	--kitchen-color: #23f0c7;
+
+	--transition: .3s ease;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+/* ========================================== HEADER ===================================== */
+
+header {
+	padding: 1rem;
+	background: var(--blue);
+	color: white;
 }
 
-.App-title {
-  font-size: 1.5em;
+.navbar {
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+	align-items: center;
+	max-width: 1200px;
+	margin: 0 auto;
 }
 
-.App-intro {
-  font-size: large;
+/* ===== logo ====== */
+
+.logo {
+	font-size: calc(var(--regularFontSize) + 4px);
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+/* ====== navigation ====== */
+
+nav {
+	grid-column: 3;
+	width: 175px;
+	font-size: var(--regularFontSize);
 }
+
+ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+}
+
+.nav-link {
+	display: block;
+	color: #e6e6e6;
+	text-decoration: none;
+	transition: .3s;
+}
+
+/* change link style on hover state */
+.nav-link:hover {
+	color: white;
+	transform: scale(1.1);
+}
+
+/* =================== ITEMS ( the container ) ============== */
+
+/* the entire outer grid container for the items */
+.items {
+	padding: 3rem 1rem;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	grid-gap: 20px;
+	color: var(--almostBlack);
+}
+
+/* the container for each item */
+.item-details {
+	padding: 8px;
+}
+
+
+/* ============= ITEM ( the individual items ) ================ */
+
+.item h4 {
+	text-align: center;
+	letter-spacing: .8px;
+}
+
+.detail {
+	font-weight: bold;
+	letter-spacing: .25px;
+}
+
+.item-detail {
+	border: 1px solid rgba(0, 0, 0, .2);
+	padding: 10px 8px;
+	margin-bottom: 10px;
+	display: grid;
+	grid-template-columns: auto 1fr;
+	grid-column-gap: 10px;
+}
+
+.modify-item {
+	display: flex;
+	justify-content: space-around;
+	padding: 10px 0;
+}
+
+.hidden {
+	display: none;
+}
+
+/* === different border color for each room ==== */
+
+.garage {
+	border: 1px solid var(--garage-color);
+}
+
+.bedroom {
+	border: 1px solid var(--bedroom-color);
+}
+
+.living-room {
+	border: 1px solid var(--living-room-color);
+}
+
+.kitchen {
+	border: 1px solid var(--kitchen-color);
+}
+
+/* === EDIT / DELETE / SAVE / BACK buttons === */
+
+.edit {
+	color: #777;
+	transition: var(--transition);
+}
+
+.edit:hover {
+	color: black;
+}
+
+.delete {
+	color: var(--delete);
+	transition: var(--transition);
+}
+
+.delete:hover {
+	color: var(--deleteHover);
+}
+
+.save {
+	color: var(--save);
+	transition: var(--transition);
+}
+
+.save:hover {
+	color: var(--saveHover);
+	transition: var(--transition);
+}
+
+.back {
+	color: var(--back);
+	transition: var(--transition);
+}
+
+.back:hover {
+	color: var(--backHover);
+	transition: var(--transition);
+}
+/* ========================= MEDIA QUERIES ====================== */

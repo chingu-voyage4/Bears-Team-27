@@ -1,0 +1,146 @@
+body {
+	box-sizing: border-box;
+	margin: 0;
+	font-size: var(--regularFontSize);
+}
+
+:root {
+	--regularFontSize: 20px;
+	--almostBlack: #222;
+	--blue: #2c8c99;
+	--transition: .3s ease;
+}
+
+/* ===================== HEADER ==================== */
+
+header {
+	padding: 1rem;
+	background: var(--blue);
+	color: white;
+}
+
+.header-inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+/* ======= LOGO ======= */
+
+.logo {
+	font-size: calc(var(--regularFontSize) + 4px);
+}
+
+/* === SIGN IN or SIGN Up ===== */
+
+.signin-signup {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	height: 35px;
+}
+
+.signin-signup span {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	padding: 0 4px;
+	transition: var(--transition);
+}
+
+.signin-signup span:hover {
+	background-color: white;
+	color: var(--blue);
+}
+
+/* ======= TAGLINE ========= */
+
+.tagline {
+	background-image: url('../images/pattern.png');
+}
+
+.tagline p {
+	font-style: italic;
+	margin: 0;
+	padding: 30px 1rem;
+	text-align: center;
+	color: var(--almostBlack);
+}
+
+/* ============ IMAGE GRID ================= */
+
+.images-container-outer {
+	background-image: url('../images/pattern.png');
+	padding: 1rem;
+}
+
+.images-container-inner {
+	max-width: 900px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-column-gap: 12px;
+	grid-row-gap: 6px;
+}
+
+.images-container-inner figure {
+	max-width: 100%;
+	margin: 0;
+}
+
+.images-container-inner img {
+	max-width: 100%;
+	border: 1px solid var(--blue);
+}
+
+/* ================ ABOUT INVENTOREE ============== */
+
+.about {
+	background-image: url('../images/pattern.png');
+	padding: 20px 1rem;
+	color: var(--almostBlack);
+}
+
+.about p {
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
