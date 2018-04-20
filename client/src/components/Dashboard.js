@@ -43,7 +43,7 @@ class Dashboard extends Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="container main">
         <h2>Dashboard</h2>
         <div className="row">
           <div className="col">

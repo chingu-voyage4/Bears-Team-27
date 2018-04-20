@@ -39,6 +39,10 @@ button {
 
 /* === Navigation Menu ===== */
 
+.navbar-nav {
+  margin-left: 75%;
+}
+
 .menu {
   position: relative;
   display: flex;
@@ -101,6 +105,7 @@ form button:hover {
 
 .main {
   margin-top: 2em;
+  text-align: center;
 }
 
 h1 {
@@ -279,6 +284,17 @@ h1 {
   outline: none;
 }
 
+#signup_footer {
+  margin:auto;
+}
+
+#signup_buttons {
+  margin-bottom: 1em;
+}
+
+#signup_buttons button:last-child {
+  margin-left: 1em;
+}
 /* ============ dashboard component ============ */
 .addLocation {
   color: white;

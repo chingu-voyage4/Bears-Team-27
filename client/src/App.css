@@ -54,7 +54,6 @@ header {
 
 nav {
 	grid-column: 3;
-	width: 175px;
 	font-size: var(--regularFontSize);
 }
 
