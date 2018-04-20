@@ -13,6 +13,19 @@ class App extends Component {
     isAuthenticated: false
   };
 
+  componentDidMount() {
+    const fontAwesome = document.createElement('script');
+    const customScript = document.createElement('script');
+
+    fontAwesome.src = 'https://use.fontawesome.com/releases/v5.0.8/js/all.js';
+    fontAwesome.async = true;
+    customScript.src = '/script.js';
+    customScript.async = true;
+
+    document.body.appendChild(fontAwesome);
+    document.body.appendChild(customScript);
+  }
+
   authenticate = () => {
     setTimeout(this.setState({ isAuthenticated: true }), 100);
   };
