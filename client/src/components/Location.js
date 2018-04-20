@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './components.css';
 
-const Location = props => {
+const Location = (props) => {
   let nameField = (
     <h5 className="card-title" onClick={props.toggleEditMode}>
       {props.name}
@@ -24,9 +25,12 @@ const Location = props => {
     <div className="card m-3" style={{ width: '15rem' }}>
       {nameField}
       <div className="card-body">
-        <Link to={`/location/${props.index}`} className="btn btn-info btn-sm">
+        <Link to={`/location/${props.index}?${props.name}`} className="btn btn-info btn-sm">
           Details
         </Link>
+        <button className="btn btn-danger btn-sm">
+          Delete
+        </button>
       </div>
     </div>
   );
