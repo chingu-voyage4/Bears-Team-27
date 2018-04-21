@@ -5,22 +5,25 @@ import './components.css';
 // This component should fetch data from location id and display
 import { location1, location2, location3 } from '../seed';
 import ItemDetail from './ItemDetail';
+import { Modal } from 'reactstrap';
 
 class Items extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      show: false
+      modal: false
     };
+
+    this.toggle = this.toggle.bind(this);
   }
 
-  handleClick() {
-    console.log('click');
-    const { show } = this.state;
-    console.log(show);
-    this.setState({ show: !show });
+  toggle() {
+    this.setState({
+      modal: !this.state.modal
+    });
   }
+
   render() {
     // get location id from props.match.params.id
     // change seed data based on url param
@@ -57,10 +60,12 @@ class Items extends Component {
       </div>
     ));
     return (
-      <div id='item_display'>
+      <div className='main' id='item_display'>
         <h2>Location {this.props.match.params.id}</h2>
-        { this.state.show && <NewItem /> }
-        <button id='new_item' onClick={this.handleClick.bind(this)}>Add an item</button>
+        <Modal isOpen={this.state.modal} className='item_modal text-center'>
+          <NewItem toggle={this.toggle} />
+        </Modal>
+        <button id='new_item' onClick={this.toggle}>Add an item</button>
         <div className="d-flex flex-wrap">{items}</div>
       </div>
     );
